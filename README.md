@@ -1,9 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.svg">
-  <img alt="Iker González Rodríguez-Priego: Python, SQL and automation for finance and operations. Commits per week, languages across all repos, contact and GitHub stats." src="assets/card-light.svg" width="100%">
+  <img alt="Factsheet for Iker González Rodríguez-Priego, Python and automation for finance: commits per week, share of commits by project, languages across all repositories and key facts." src="assets/card-light.svg" width="100%">
 </picture>
-
-### Iker González Rodríguez-Priego
 
 I write Python tools that take repetitive data work off people's hands: scrapers, small pipelines, scheduled reports and the odd desktop app. My background is finance (private equity data, forensic accounting, month-end close), so most of what I build sits close to spreadsheets and numbers. I use Claude Code for most of the typing and spend my own time on the design, the checks and the parts that break.
 
