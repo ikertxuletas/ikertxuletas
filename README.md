@@ -25,3 +25,20 @@ The private ones hold personal or client data. I'm happy to walk through the cod
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
   <img alt="Sources (public APIs, websites, files) are collected with requests or Playwright, stored in SQLite or Excel, checked for duplicates, freshness and consistency, passed through an optional LLM step whose output is validated, and turned into an HTML report, an email or a dashboard. Everything runs from Windows Task Scheduler and writes logs to a status panel." src="assets/pipeline-light.svg" width="100%">
 </picture>
+
+#### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/snake-dark.svg">
+  <img alt="Snake eating the contribution graph" src="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/snake.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/pacman-contribution-graph-dark.svg">
+  <img alt="Pac-Man eating the contribution graph" src="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/pacman-contribution-graph.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/breakout-contribution-graph-dark.svg">
+  <img alt="Breakout played on the contribution graph" src="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/breakout-contribution-graph.svg" width="100%">
+</picture>
