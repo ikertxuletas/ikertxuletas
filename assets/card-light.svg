@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback, Consolas, 'SF Mono', Menlo, monospace" width="1040" height="504" viewBox="0 0 1040 504">
+<style>@font-face{src:local("Consolas"),local("Consolas Bold");font-family:"ConsolasFallback";font-display:swap;size-adjust:109%}text,tspan{white-space:pre}</style>
+<rect x=".5" y=".5" width="1039" height="503" rx="15" fill="#f6f8fa" stroke="#d0d7de"/>
+<path d="M424 24 V480" stroke="#d0d7de"/>
+<text x="22" y="36" font-size="14" fill="#24292f">commits per week since Jul 2026</text>
+<path d="M62 296.0 H404" stroke="#8c959f" stroke-opacity="0.6" stroke-dasharray=""/>
+<text x="52" y="300.0" font-size="12" text-anchor="end" fill="#8c959f">0</text>
+<path d="M62 238.5 H404" stroke="#8c959f" stroke-opacity="0.25" stroke-dasharray="2 4"/>
+<text x="52" y="242.5" font-size="12" text-anchor="end" fill="#8c959f">50</text>
+<path d="M62 181.0 H404" stroke="#8c959f" stroke-opacity="0.25" stroke-dasharray="2 4"/>
+<text x="52" y="185.0" font-size="12" text-anchor="end" fill="#8c959f">100</text>
+<path d="M62 123.5 H404" stroke="#8c959f" stroke-opacity="0.25" stroke-dasharray="2 4"/>
+<text x="52" y="127.5" font-size="12" text-anchor="end" fill="#8c959f">150</text>
+<path d="M62 66.0 H404" stroke="#8c959f" stroke-opacity="0.25" stroke-dasharray="2 4"/>
+<text x="52" y="70.0" font-size="12" text-anchor="end" fill="#8c959f">200</text>
+<polygon points="62,296 62.0,296.0 84.8,296.0 107.6,229.3 130.4,235.1 153.2,208.6 176.0,241.9 198.8,259.2 221.6,260.4 244.4,292.6 267.2,236.2 290.0,186.8 312.8,148.8 335.6,108.6 358.4,296.0 381.2,292.6 404.0,296.0 404,296" fill="#953800" fill-opacity="0.12"/>
+<polyline points="62.0,296.0 84.8,296.0 107.6,229.3 130.4,235.1 153.2,208.6 176.0,241.9 198.8,259.2 221.6,260.4 244.4,292.6 267.2,236.2 290.0,186.8 312.8,148.8 335.6,108.6 358.4,296.0 381.2,292.6 404.0,296.0" fill="none" stroke="#953800" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="404.0" cy="296.0" r="3.5" fill="#953800"/>
+<text x="62.0" y="316" font-size="12" fill="#8c959f">Jul</text>
+<text x="130.4" y="316" font-size="12" fill="#8c959f">Aug</text>
+<text x="221.6" y="316" font-size="12" fill="#8c959f">Sep</text>
+<text x="335.6" y="316" font-size="12" fill="#8c959f">Oct</text>
+<text x="22" y="362" font-size="14" fill="#24292f">languages across all repos</text>
+<text x="22" y="392" font-size="13" fill="#0a3069">Python</text>
+<rect x="124" y="382" width="232" height="10" rx="2" fill="#8c959f" fill-opacity="0.2"/>
+<rect x="124" y="382" width="190.7" height="10" rx="2" fill="#953800"/>
+<text x="404" y="392" font-size="13" text-anchor="end" fill="#24292f">82%</text>
+<text x="22" y="418" font-size="13" fill="#0a3069">JavaScript</text>
+<rect x="124" y="408" width="232" height="10" rx="2" fill="#8c959f" fill-opacity="0.2"/>
+<rect x="124" y="408" width="30.7" height="10" rx="2" fill="#953800"/>
+<text x="404" y="418" font-size="13" text-anchor="end" fill="#24292f">13%</text>
+<text x="22" y="444" font-size="13" fill="#0a3069">HTML</text>
+<rect x="124" y="434" width="232" height="10" rx="2" fill="#8c959f" fill-opacity="0.2"/>
+<rect x="124" y="434" width="6.1" height="10" rx="2" fill="#953800"/>
+<text x="404" y="444" font-size="13" text-anchor="end" fill="#24292f">3%</text>
+<text x="22" y="470" font-size="13" fill="#0a3069">CSS</text>
+<rect x="124" y="460" width="232" height="10" rx="2" fill="#8c959f" fill-opacity="0.2"/>
+<rect x="124" y="460" width="3.8" height="10" rx="2" fill="#953800"/>
+<text x="404" y="470" font-size="13" text-anchor="end" fill="#24292f">2%</text>
+<text font-size="16" fill="#24292f">
+<tspan x="448" y="34"><tspan fill="#24292f">ikertxuletas@munich</tspan></tspan>
+<tspan x="448" y="54"><tspan fill="#8c959f">────────────────────────────────────────────────────────────</tspan></tspan>
+<tspan x="448" y="74"><tspan fill="#953800">OS</tspan>:<tspan fill="#8c959f"> ............................... </tspan><tspan fill="#0a3069">Windows 11, Python 3.14</tspan></tspan>
+<tspan x="448" y="94"><tspan fill="#953800">Host</tspan>:<tspan fill="#8c959f"> ................... </tspan><tspan fill="#0a3069">Reinike AI, IFEMA DACH delegation</tspan></tspan>
+<tspan x="448" y="114"><tspan fill="#953800">Kernel</tspan>:<tspan fill="#8c959f"> ............ </tspan><tspan fill="#0a3069">Finance (PE data, forensic, month-end)</tspan></tspan>
+<tspan x="448" y="134"><tspan fill="#953800">IDE</tspan>:<tspan fill="#8c959f"> ......................... </tspan><tspan fill="#0a3069">Claude Code, Excel, Power BI</tspan></tspan>
+<tspan x="448" y="154"></tspan>
+<tspan x="448" y="174"><tspan fill="#953800">Languages.Programming</tspan>:<tspan fill="#8c959f">  </tspan><tspan fill="#0a3069">Python, SQL, PowerShell, JavaScript</tspan></tspan>
+<tspan x="448" y="194"><tspan fill="#953800">Languages.Real</tspan>:<tspan fill="#8c959f"> .................. </tspan><tspan fill="#0a3069">Spanish, English, German</tspan></tspan>
+<tspan x="448" y="214"></tspan>
+<tspan x="448" y="234"><tspan fill="#953800">Projects.Public</tspan>:<tspan fill="#8c959f"> ................................ </tspan><tspan fill="#0a3069">job-radar</tspan></tspan>
+<tspan x="448" y="254"><tspan fill="#953800">Projects.Private</tspan>:<tspan fill="#8c959f"> ...... </tspan><tspan fill="#0a3069">Atlas, Quant, LeeMe, fair scrapers</tspan></tspan>
+<tspan x="448" y="274"><tspan fill="#953800">Hobbies.Markets</tspan>:<tspan fill="#8c959f"> ................ </tspan><tspan fill="#0a3069">backtests, macro, futures</tspan></tspan>
+<tspan x="448" y="294"><tspan fill="#953800">Hobbies.Other</tspan>:<tspan fill="#8c959f"> ......... </tspan><tspan fill="#0a3069">debate coaching, economics writing</tspan></tspan>
+<tspan x="448" y="314"></tspan>
+<tspan x="448" y="334"><tspan fill="#24292f">- Contact </tspan><tspan fill="#8c959f">──────────────────────────────────────────────────</tspan></tspan>
+<tspan x="448" y="354"><tspan fill="#953800">Email</tspan>:<tspan fill="#8c959f"> ............................... </tspan><tspan fill="#0a3069">iker.g.job@gmail.com</tspan></tspan>
+<tspan x="448" y="374"><tspan fill="#953800">LinkedIn</tspan>:<tspan fill="#8c959f"> ......................................... </tspan><tspan fill="#0a3069">IkerGRP</tspan></tspan>
+<tspan x="448" y="394"></tspan>
+<tspan x="448" y="414"><tspan fill="#24292f">- GitHub Stats </tspan><tspan fill="#8c959f">─────────────────────────────────────────────</tspan></tspan>
+<tspan x="448" y="434"><tspan fill="#953800">Repos</tspan>:<tspan fill="#8c959f"> ...................................... </tspan><tspan fill="#0a3069">6 {public: 2}</tspan></tspan>
+<tspan x="448" y="454"><tspan fill="#953800">Commits, last 12 months</tspan>:<tspan fill="#8c959f"> .............................. </tspan><tspan fill="#0a3069">741</tspan></tspan>
+<tspan x="448" y="474"><tspan fill="#953800">Lines of code</tspan>:<tspan fill="#8c959f"> ............ </tspan><tspan fill="#0a3069">270,117</tspan> ( <tspan fill="#1a7f37">333,145++</tspan>, <tspan fill="#cf222e">63,028--</tspan> )</tspan>
+</text></svg>

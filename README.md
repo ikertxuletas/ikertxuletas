@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.svg">
+  <img alt="Iker González Rodríguez-Priego: Python, SQL and automation for finance and operations. Commits per week, languages across all repos, contact and GitHub stats." src="assets/card-light.svg" width="100%">
+</picture>
+
 ### Iker González Rodríguez-Priego
 
 I write Python tools that take repetitive data work off people's hands: scrapers, small pipelines, scheduled reports and the odd desktop app. My background is finance (private equity data, forensic accounting, month-end close), so most of what I build sits close to spreadsheets and numbers. I use Claude Code for most of the typing and spend my own time on the design, the checks and the parts that break.
@@ -20,9 +25,3 @@ The private ones hold personal or client data. I'm happy to walk through the cod
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
   <img alt="Sources (public APIs, websites, files) are collected with requests or Playwright, stored in SQLite or Excel, checked for duplicates, freshness and consistency, passed through an optional LLM step whose output is validated, and turned into an HTML report, an email or a dashboard. Everything runs from Windows Task Scheduler and writes logs to a status panel." src="assets/pipeline-light.svg" width="100%">
 </picture>
-
-#### Tools
-
-Python (pandas, requests, Playwright, SQLite, pytest), SQL, Excel and Power Query, Power BI, n8n, PowerShell, Git, Claude Code.
-
-[LinkedIn](https://linkedin.com/in/IkerGRP) · iker.g.job@gmail.com
