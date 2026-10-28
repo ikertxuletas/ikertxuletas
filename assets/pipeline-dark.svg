@@ -1,35 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="210" viewBox="0 0 1000 210" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#656c76"/></marker></defs>
-<rect x="15" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d"/>
-<text x="31" y="52" font-size="15" font-weight="600" fill="#f0f6fc">Sources</text>
-<text x="31" y="80" font-size="13" fill="#9198a1">public APIs</text>
-<text x="31" y="100" font-size="13" fill="#9198a1">websites, files</text>
-<path d="M187 72.0 H217" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
-<rect x="221" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d"/>
-<text x="237" y="52" font-size="15" font-weight="600" fill="#f0f6fc">Collect</text>
-<text x="237" y="80" font-size="13" fill="#9198a1">requests</text>
-<text x="237" y="100" font-size="13" fill="#9198a1">Playwright</text>
-<path d="M393 72.0 H423" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
-<rect x="427" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d"/>
-<text x="443" y="52" font-size="15" font-weight="600" fill="#f0f6fc">Store</text>
-<text x="443" y="80" font-size="13" fill="#9198a1">SQLite</text>
-<text x="443" y="100" font-size="13" fill="#9198a1">Excel</text>
-<path d="M599 72.0 H629" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
-<rect x="633" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d"/>
-<text x="649" y="52" font-size="15" font-weight="600" fill="#f0f6fc">Check</text>
-<text x="649" y="80" font-size="13" fill="#9198a1">duplicates, freshness</text>
-<text x="649" y="100" font-size="13" fill="#9198a1">consistency</text>
-<path d="M805 72.0 H835" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
-<rect x="839" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d" stroke-dasharray="5 4"/>
-<text x="855" y="52" font-size="15" font-weight="600" fill="#f0f6fc">LLM step</text>
-<text x="855" y="80" font-size="13" fill="#9198a1">scoring, drafting</text>
-<text x="855" y="100" font-size="13" fill="#9198a1">output validated</text>
-<path d="M1011 72.0 H1041" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
-<rect x="1045" y="20" width="168" height="104" rx="8" fill="#151b23" stroke="#3d444d"/>
-<text x="1061" y="52" font-size="15" font-weight="600" fill="#f0f6fc">Output</text>
-<text x="1061" y="80" font-size="13" fill="#9198a1">HTML report</text>
-<text x="1061" y="100" font-size="13" fill="#9198a1">email, dashboard</text>
-<path d="M15 150 H1185" stroke="#3d444d"/>
-<circle cx="21" cy="186" r="4" fill="#4493f8"/>
-<text x="35" y="191" font-size="13" fill="#9198a1"><tspan fill="#f0f6fc" font-weight="600">Windows Task Scheduler</tspan> runs each job on a timetable; every run writes to a log and to a status panel, and a failed check stops the output instead of publishing bad data.</text>
+<rect x="7" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d"/>
+<text x="23" y="48" font-size="15" font-weight="600" fill="#f0f6fc">Sources</text>
+<text x="23" y="74" font-size="13" fill="#9198a1">public APIs</text>
+<text x="23" y="93" font-size="13" fill="#9198a1">websites, files</text>
+<path d="M153 74.0 H172" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="176" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d"/>
+<text x="192" y="48" font-size="15" font-weight="600" fill="#f0f6fc">Collect</text>
+<text x="192" y="74" font-size="13" fill="#9198a1">requests</text>
+<text x="192" y="93" font-size="13" fill="#9198a1">Playwright</text>
+<path d="M322 74.0 H341" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="345" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d"/>
+<text x="361" y="48" font-size="15" font-weight="600" fill="#f0f6fc">Store</text>
+<text x="361" y="74" font-size="13" fill="#9198a1">SQLite</text>
+<text x="361" y="93" font-size="13" fill="#9198a1">Excel</text>
+<path d="M491 74.0 H510" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="514" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d"/>
+<text x="530" y="48" font-size="15" font-weight="600" fill="#f0f6fc">Check</text>
+<text x="530" y="74" font-size="13" fill="#9198a1">duplicates</text>
+<text x="530" y="93" font-size="13" fill="#9198a1">freshness</text>
+<text x="530" y="112" font-size="13" fill="#9198a1">consistency</text>
+<path d="M660 74.0 H679" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="683" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d" stroke-dasharray="5 4"/>
+<text x="699" y="48" font-size="15" font-weight="600" fill="#f0f6fc">LLM step</text>
+<text x="699" y="74" font-size="13" fill="#9198a1">scoring, drafting</text>
+<text x="699" y="93" font-size="13" fill="#9198a1">validated output</text>
+<path d="M829 74.0 H848" stroke="#656c76" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="852" y="16" width="142" height="116" rx="8" fill="#151b23" stroke="#3d444d"/>
+<text x="868" y="48" font-size="15" font-weight="600" fill="#f0f6fc">Output</text>
+<text x="868" y="74" font-size="13" fill="#9198a1">HTML report</text>
+<text x="868" y="93" font-size="13" fill="#9198a1">email, dashboard</text>
+<path d="M7 154 H993" stroke="#3d444d"/>
+<circle cx="13" cy="183" r="4" fill="#4493f8"/>
+<text x="27" y="188" font-size="13" fill="#9198a1"><tspan fill="#f0f6fc" font-weight="600">Windows Task Scheduler</tspan> runs each job on a timetable. Every run is logged, and a failed check stops the output.</text>
 </svg>
