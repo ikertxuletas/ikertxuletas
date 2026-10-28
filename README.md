@@ -1,38 +1,28 @@
-<a href="https://linkedin.com/in/IkerGRP"><img src="assets/banner.svg" alt="Iker González Rodríguez-Priego · Finance & Data Analyst · AI Automation" width="100%"></a>
+### Iker González Rodríguez-Priego
 
-### `$ whoami`
+I write Python tools that take repetitive data work off people's hands: scrapers, small pipelines, scheduled reports and the odd desktop app. My background is finance (private equity data, forensic accounting, month-end close), so most of what I build sits close to spreadsheets and numbers. I use Claude Code for most of the typing and spend my own time on the design, the checks and the parts that break.
 
-Finance and data analyst who automates the work around the numbers. I analysed private equity fund data at **CEPRES** (Munich), worked on damage calculations and reconciliations at **Alvarez & Marsal** and on month-end close at **BDO**. Today I build Python and AI automations with **Claude Code** and **n8n**, for IFEMA's DACH delegation and for small businesses through **Reinike AI**.
+Based in Munich, working in Spanish, English and German.
 
-My rule: ask what a process costs before automating it, and keep a human check where a mistake would be expensive.
+#### What I'm working on
 
-🇪🇸 Spanish native · 🇬🇧 English C1-C2 · 🇩🇪 German B1-B2 · 🕐 CET
+- **[job-radar](https://github.com/ikertxuletas/job-radar)**: pulls remote job offers every morning from public job APIs and about 120 company career boards (Greenhouse, Lever, Ashby, Personio and others), drops the ones it has already seen, scores the new ones against a written profile with an LLM and writes a single HTML page.
+- **Atlas** (private): a local web app that explains the day's large moves in indices, stocks, commodities, FX and rates, then checks a few days later whether the explanation held up. Every figure is read from one price store and carries its source and closing date; the page is not published if any check fails. Python standard library on the back end, plain ES modules on the front.
+- **Quant research** (private): a nightly job that turns published trading strategies into exact rules, backtests them with each broker's real costs and emails a short report in the morning. Around 600 tests, because a backtest that silently lies is worse than none.
+- **Trade-fair prospecting** (private): exhibitor scrapers for international trade-fair directories, using the sites' own JSON endpoints where they exist and Playwright where they don't, followed by normalisation, enrichment and a daily report. Runs as scheduled tasks on two machines with a heartbeat, so the second one takes over if the first goes quiet.
+- **LeeMe** (private): a Windows app that reads PDFs aloud in a natural Spanish voice and highlights each word as it is spoken (pywebview, edge-tts, VLC).
 
-### 📈 Portfolio
+The private ones hold personal or client data. I'm happy to walk through the code on a call.
 
-| Ticker | Project | What it does | Stack | Status |
-|:--|:--|:--|:--|:--|
-| `RADAR` | [**job-radar**](https://github.com/ikertxuletas/job-radar) | Collects remote job offers every day from public feeds and ~120 company career boards, drops what it already showed, scores each new offer against my profile with an LLM and writes one HTML page. | Python · LLM | 🟢 public |
-| `ATLAS` | **Atlas** | Daily market briefing: explains the strong moves in indices, stocks, commodities, FX and rates, then checks days later with data whether the explanation held. Every figure carries its source and date. | Python · JS · LLM | 🔒 private · active |
-| `QUANT` | **Quant research desk** | Nightly pipeline that turns published trading strategies into exact rules, backtests them with real broker costs and sends a morning report flagging only the ones that survive. | Python · pytest | 🔒 private · active |
-| `FAIRS` | **Trade-fair prospecting suite** | Exhibitor directory scrapers (REST APIs and Playwright), data normalisation, scheduled daily reports and a desktop control centre that monitors every job. | Python · Playwright · PowerShell | 🔒 private · active |
-| `LEEME` | **LeeMe** | Desktop app that reads PDFs aloud in a natural Spanish voice and highlights each word as it is spoken. One-click installer. | Python · pywebview · TTS | 🔒 private · active |
-
-<sub>Private repos hold client or personal data. Happy to walk you through the code on a call.</sub>
-
-### 🧰 Stack
-
-<img src="assets/stack.svg" alt="Finance: financial modelling, PE fund data, month-end close, reconciliations, forensic accounting, DCF and comps. Data: Excel and Power Query, SQL, Power BI, pandas, SQLite, HTML dashboards. Automation: Claude Code, Python, n8n, Playwright, LLM APIs, PowerShell, scheduled jobs." width="100%">
-
-### 🐍 Activity
+#### How most of it is put together
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/snake-dark.svg">
-  <img alt="Contribution graph eaten by a snake" src="https://raw.githubusercontent.com/ikertxuletas/ikertxuletas/output/snake.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
+  <img alt="Sources (public APIs, websites, files) are collected with requests or Playwright, stored in SQLite or Excel, checked for duplicates, freshness and consistency, passed through an optional LLM step whose output is validated, and turned into an HTML report, an email or a dashboard. Everything runs from Windows Task Scheduler and writes logs to a status panel." src="assets/pipeline-light.svg" width="100%">
 </picture>
 
-### 📬 Contact
+#### Tools
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-IkerGRP-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/IkerGRP)
-[![Email](https://img.shields.io/badge/Email-iker.g.job%40gmail.com-E0A43A?style=flat-square&logo=gmail&logoColor=white)](mailto:iker.g.job@gmail.com)
-![Open to](https://img.shields.io/badge/Open_to-remote_roles_in_Europe-4CB782?style=flat-square)
+Python (pandas, requests, Playwright, SQLite, pytest), SQL, Excel and Power Query, Power BI, n8n, PowerShell, Git, Claude Code.
+
+[LinkedIn](https://linkedin.com/in/IkerGRP) · iker.g.job@gmail.com
