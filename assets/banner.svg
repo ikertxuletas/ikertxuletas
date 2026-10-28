@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Iker González Rodríguez-Priego · Finance &amp; Data Analyst · AI Automation">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .sans { font-family: 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif; }
+    .ink { fill: #E8EAED; } .ink2 { fill: #C9CDD3; } .dim { fill: #A3A9B1; } .amber { fill: #E0A43A; } .green { fill: #4CB782; }
+    .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+    .d1 { animation-delay: .2s; } .d2 { animation-delay: .6s; } .d3 { animation-delay: 1s; }
+    @keyframes fade { to { opacity: 1; } }
+    #typing { animation: type 2.4s steps(40, end) 1.2s forwards; }
+    @keyframes type { from { width: 0; } to { width: 380px; } }
+    .caret { animation: caret 2.4s steps(40, end) 1.2s forwards; }
+    @keyframes caret { from { transform: translateX(0); } to { transform: translateX(380px); } }
+    .cursor { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .line { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 3s ease-out .8s forwards; }
+    .area { opacity: 0; animation: fade 1.2s ease-out 3.2s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .pulse { transform-origin: 1124px 96px; animation: pulse 2s ease-in-out 3.8s infinite; opacity: 0; }
+    @keyframes pulse { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+    .dot { opacity: 0; animation: fade .3s ease-out 3.7s forwards; }
+    .tape { animation: scroll 28s linear infinite; }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-1050px); } }
+  </style>
+  <defs>
+    <clipPath id="clip-type"><rect id="typing" x="48" y="182" width="0" height="34"/></clipPath>
+    <clipPath id="clip-tape"><rect x="1" y="272" width="1198" height="47" rx="0"/></clipPath>
+    <linearGradient id="g-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4CB782" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#4CB782" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x=".5" y=".5" width="1199" height="319" rx="14" fill="#15171A" stroke="#2C3037"/>
+  <path d="M1 44 H1199" stroke="#2C3037"/>
+  <circle cx="26" cy="22" r="6" fill="#E5645A"/><circle cx="46" cy="22" r="6" fill="#E0A43A"/><circle cx="66" cy="22" r="6" fill="#4CB782"/>
+  <text x="600" y="27" text-anchor="middle" class="mono dim" font-size="13">iker@munich: ~/finance-x-automation</text>
+  <text x="1172" y="27" text-anchor="end" class="mono green" font-size="12">● LIVE · CET</text>
+
+  <text x="48" y="104" class="sans ink fade d1" font-size="40" font-weight="700">Iker González Rodríguez-Priego</text>
+  <text x="48" y="146" class="sans amber fade d2" font-size="21" font-weight="600">Finance &amp; Data Analyst · AI Automation</text>
+  <text x="48" y="172" class="mono dim fade d3" font-size="13">ex-CEPRES (PE data) · Alvarez &amp; Marsal · BDO · Reinike AI</text>
+
+  <g clip-path="url(#clip-type)">
+    <text x="48" y="206" class="mono ink2" font-size="17" textLength="374" lengthAdjust="spacingAndGlyphs"><tspan class="green">❯</tspan> automating the work around the numbers</text>
+  </g>
+  <g class="caret"><rect x="52" y="190" width="10" height="20" fill="#E0A43A" class="cursor"/></g>
+
+  <g stroke="#2C3037" stroke-width="1">
+    <path d="M760 70 H1170 M760 120 H1170 M760 170 H1170 M760 220 H1170"/>
+  </g>
+  <g class="mono dim" font-size="10">
+    <text x="1176" y="74">+30%</text><text x="1176" y="174">0%</text>
+  </g>
+  <path class="area" fill="url(#g-area)" d="M760 214 L800 206 L840 210 L880 188 L920 194 L960 168 L1000 176 L1040 142 L1080 150 L1124 96 L1124 230 L760 230 Z"/>
+  <path class="line" fill="none" stroke="#4CB782" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M760 214 L800 206 L840 210 L880 188 L920 194 L960 168 L1000 176 L1040 142 L1080 150 L1124 96"/>
+  <circle class="pulse" cx="1124" cy="96" r="6" fill="#E0A43A"/>
+  <circle class="dot" cx="1124" cy="96" r="5" fill="#E0A43A"/>
+  <text x="1110" y="84" text-anchor="end" class="mono amber dot" font-size="12">manual hours ↓ · output ↑</text>
+
+  <path d="M1 272 H1199" stroke="#2C3037"/>
+  <g clip-path="url(#clip-tape)">
+    <g class="tape mono" font-size="14">
+      <text y="301" textLength="1000" lengthAdjust="spacing">
+        <tspan x="24" class="ink2">PYTHON</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   SQL</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   EXCEL</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   POWER BI</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   N8N</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   CLAUDE CODE</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   PLAYWRIGHT</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   PE DATA</tspan><tspan class="amber"> ● </tspan><tspan class="ink2">   FP&amp;A</tspan><tspan class="amber"> ● </tspan><tspan class="ink2">   ES·EN·DE</tspan><tspan class="amber"> ● </tspan>
+      </text>
+      <text y="301" transform="translate(1050 0)" textLength="1000" lengthAdjust="spacing">
+        <tspan x="24" class="ink2">PYTHON</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   SQL</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   EXCEL</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   POWER BI</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   N8N</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   CLAUDE CODE</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   PLAYWRIGHT</tspan><tspan class="green"> ▲ </tspan><tspan class="ink2">   PE DATA</tspan><tspan class="amber"> ● </tspan><tspan class="ink2">   FP&amp;A</tspan><tspan class="amber"> ● </tspan><tspan class="ink2">   ES·EN·DE</tspan><tspan class="amber"> ● </tspan>
+      </text>
+    </g>
+  </g>
+</svg>
