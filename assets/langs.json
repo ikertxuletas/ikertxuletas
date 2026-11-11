@@ -1,0 +1,25 @@
+{
+ "repos": 9,
+ "langs": [
+  [
+   "Python",
+   77.5
+  ],
+  [
+   "JavaScript",
+   12.5
+  ],
+  [
+   "HTML",
+   4.2
+  ],
+  [
+   "TypeScript",
+   3.5
+  ],
+  [
+   "CSS",
+   2.1
+  ]
+ ]
+}
