@@ -9,10 +9,10 @@ EASE = "cubic-bezier(.23,1,.32,1)"
 W = 860
 
 THEMES = {
-    "dark": {"ink": "#f0f6fc", "muted": "#9198a1", "line": "#3d444d", "surface": "#1c232e",
-             "accent": "#C9B48A", "accent2": "#8C7748", "faint": "#6e7681", "dim": "#3d444d"},
-    "light": {"ink": "#1f2328", "muted": "#59636e", "line": "#d1d9e0", "surface": "#f2eee7",
-              "accent": "#7A6034", "accent2": "#A99D88", "faint": "#8c959f", "dim": "#d1d9e0"},
+    "dark": {"ink": "#f0f6fc", "muted": "#b1bac4", "line": "#3d444d", "surface": "#1c232e",
+             "accent": "#C9B48A", "accent2": "#8C7748", "faint": "#6e7681", "dim": "#545d68"},
+    "light": {"ink": "#1f2328", "muted": "#4b535d", "line": "#d1d9e0", "surface": "#f2eee7",
+              "accent": "#7A6034", "accent2": "#A99D88", "faint": "#8c959f", "dim": "#b7bfc8"},
 }
 
 

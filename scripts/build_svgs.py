@@ -61,14 +61,14 @@ def hero(t):
 def stats(t):
     h = 100
     items = [("3", "languages spoken"), ("5", "tools of my own in use"), ("Daily", "reports, no button pressed"), ("100%", "of figures checked")]
-    css = "@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}.br{animation:breathe 4s ease-in-out infinite}"
+    css = "@keyframes breathe{0%,100%{opacity:.82}50%{opacity:1}}.br{animation:breathe 4s ease-in-out infinite}"
     b = ""
     for i, (big, lab) in enumerate(items):
         x = i * W / 4
         col = t["accent"] if big == "Daily" else t["ink"]
         b += (f'<g class="r" style="animation-delay:{.1 + i * .1}s"><text {"class=\"br\" " if big == "Daily" else ""}x="{x}" y="52" font-size="50" '
               f'font-weight="700" letter-spacing="-2.4" fill="{col}">{big}</text>'
-              f'<text x="{x}" y="84" font-size="14" fill="{t["muted"]}">{lab}</text></g>')
+              f'<text x="{x}" y="84" font-size="15" font-weight="500" fill="{t["muted"]}">{lab}</text></g>')
     return svg(h, b, css, "3 languages spoken. 5 tools of my own in use. Daily reports with no button pressed. 100% of figures checked.")
 
 
@@ -97,26 +97,33 @@ def projects(t):
               f'<rect x="0.5" y="{y + 4.5}" width="{W - 1}" height="{row - 9}" rx="12" fill="{t["surface"]}"/>'
               f'<g clip-path="url(#c{i})"><ellipse class="spot" style="{d}" cx="140" cy="{y + row / 2}" rx="180" ry="90" fill="url(#sp)"/></g>'
               f'<rect class="edge" style="{d}" x="0.5" y="{y + 4.5}" width="{W - 1}" height="{row - 9}" rx="12" fill="none" stroke="{t["accent"]}" stroke-opacity=".7"/></g>'
-              f'<g class="nud" style="{d}"><text x="20" y="{y + 32}" font-size="13" fill="{t["muted"]}">{esc(name)}</text>'
+              f'<g class="nud" style="{d}"><text x="20" y="{y + 32}" font-size="14" font-weight="500" fill="{t["muted"]}">{esc(name)}</text>'
               f'<text x="20" y="{y + 58}" font-size="19" font-weight="600" letter-spacing="-0.4" fill="{t["ink"]}">{esc(line)}</text></g>')
     return svg(h, b, css, "What I've built: " + "; ".join(f"{n}: {l}" for n, l in PROJECTS))
 
 
 def build(t):
-    h = 120
-    css = (f"@keyframes glide{{0%{{transform:translateX(0)}}100%{{transform:translateX({W - 260}px)}}}}"
-           f".gl{{animation:glide 6s cubic-bezier(.77,0,.175,1) infinite alternate}}")
+    h, n, slot = 120, len(STEPS), 2.4
+    total = n * slot
+    p = 100 / n
+    xs = [0, 175, 355, 520, W]
+    widths = [len(st) * 9.4 for st in STEPS]
+    starts = [xs[i] if i < n - 1 else W - widths[i] for i in range(n)]
+    gw = 140
+    centres = [starts[i] + widths[i] / 2 - gw / 2 for i in range(n)]
+    frames = "".join(f"{i * p:.1f}%,{i * p + p * 0.7:.1f}%{{transform:translateX({c:.0f}px)}}" for i, c in enumerate(centres))
+    css = (f"@keyframes glide{{{frames}100%{{transform:translateX({centres[0]:.0f}px)}}}}"
+           f".gl{{animation:glide {total}s cubic-bezier(.65,0,.35,1) infinite}}"
+           f"@keyframes lit{{0%{{fill:{t['muted']}}}3%,{p - 3:.1f}%{{fill:{t['accent']}}}{p + 2:.1f}%,100%{{fill:{t['muted']}}}}}"
+           f".st{{fill:{t['muted']};animation:lit {total}s ease-in-out infinite}}")
     b = (f'<defs><linearGradient id="gg"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0"/>'
          f'<stop offset=".5" stop-color="{t["accent"]}"/><stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></linearGradient></defs>'
          f'<text x="0" y="28" font-size="24" font-weight="700" letter-spacing="-0.8" fill="{t["ink"]}">How I build</text>')
-    xs = [0, 175, 355, 520, W]
-    for i, s in enumerate(STEPS):
-        anchor = "end" if i == len(STEPS) - 1 else "start"
-        col = t["accent"] if i == len(STEPS) - 1 else (t["ink"] if i == 0 else t["muted"])
-        b += f'<text x="{xs[i]}" y="70" text-anchor="{anchor}" font-size="17" font-weight="500" fill="{col}">{s}</text>'
+    for i, st in enumerate(STEPS):
+        b += f'<text class="st" style="animation-delay:{i * slot}s" x="{starts[i]:.0f}" y="70" font-size="17" font-weight="600">{st}</text>'
     b += (f'<rect x="0" y="84" width="{W}" height="1" fill="{t["line"]}"/>'
-          f'<rect class="gl" x="0" y="83" width="260" height="3" rx="1.5" fill="url(#gg)"/>'
-          f'<text x="0" y="112" font-size="15" fill="{t["muted"]}">Gather the data, put it in order, check it, explain it and send it to whoever needs it, every day.</text>')
+          f'<rect class="gl" x="0" y="83" width="{gw}" height="3" rx="1.5" fill="url(#gg)"/>'
+          f'<text x="0" y="112" font-size="15" font-weight="500" fill="{t["muted"]}">Gather the data, put it in order, check it, explain it and send it to whoever needs it, every day.</text>')
     return svg(h, b, css, "How I build: " + ", ".join(STEPS))
 
 
@@ -139,7 +146,7 @@ def pill(t, text):
 
 
 def note(t):
-    b = f'<text x="0" y="18" font-size="14" fill="{t["muted"]}">job-radar is open source. The rest hold personal or client data; happy to show them on a call.</text>'
+    b = f'<text x="0" y="18" font-size="15" font-weight="500" fill="{t["muted"]}">job-radar is open source. The rest hold personal or client data; happy to show them on a call.</text>'
     return svg(28, b, label="job-radar is open source. The rest hold personal or client data; happy to show them on a call.")
 
 

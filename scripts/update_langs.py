@@ -72,13 +72,13 @@ def chart(t, n_repos, langs):
     for i, (name, pct) in enumerate(langs):
         y = 74 + i * 38
         d = f"animation-delay:{i * slot}s"
-        b += (f'<text class="cyc" style="{d}" x="{cx}" y="{cy + 8}" text-anchor="middle" font-size="44" font-weight="700" letter-spacing="-2" fill="{colors[i] if i < 2 else t["ink"]}">{pct:g}%</text>'
-              f'<text class="cyc" style="{d}" x="{cx}" y="{cy + 34}" text-anchor="middle" font-size="14" fill="{t["muted"]}">{esc(name)}</text>'
+        b += (f'<text class="cyc" style="{d}" x="{cx}" y="{cy + 8}" text-anchor="middle" font-size="44" font-weight="700" letter-spacing="-2" fill="{t["accent"] if i == 0 else t["ink"]}">{pct:g}%</text>'
+              f'<text class="cyc" style="{d}" x="{cx}" y="{cy + 34}" text-anchor="middle" font-size="15" font-weight="500" fill="{t["muted"]}">{esc(name)}</text>'
               f'<rect class="row" style="{d}" x="{lx - 14}" y="{y - 24}" width="{W - lx + 14}" height="34" rx="10" fill="{t["surface"]}"/>'
               f'<circle cx="{lx + 4}" cy="{y - 7}" r="5" fill="{colors[i]}"/>'
               f'<text x="{lx + 20}" y="{y - 2}" font-size="16" font-weight="600" fill="{t["ink"]}">{esc(name)}</text>'
-              f'<text x="{lx + 140}" y="{y - 2}" font-size="14" fill="{t["muted"]}">{pct:g}%  {esc(USES.get(name, ""))}</text>')
-    b += f'<text x="{lx}" y="{h - 8}" font-size="13" fill="{t["muted"]}">Measured across my {n_repos} repositories, public and private. Updated daily.</text>'
+              f'<text x="{lx + 140}" y="{y - 2}" font-size="15" fill="{t["muted"]}">{pct:g}%  {esc(USES.get(name, ""))}</text>')
+    b += f'<text x="{lx}" y="{h - 8}" font-size="14" fill="{t["muted"]}">Measured across my {n_repos} repositories, public and private. Updated daily.</text>'
     label = "Languages across my code: " + ", ".join(f"{n} {p:g}%" for n, p in langs)
     return svg(h, b, css, label)
 
