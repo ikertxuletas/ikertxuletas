@@ -15,17 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: "pacman,breakout"
-
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
+            dist/snake.svg?color_snake=#7A6034&color_dots=#E6E2DB,#D3CCBF,#B7AD9B,#9C8E76,#7A6034
+            dist/snake-dark.svg?palette=github-dark&color_snake=#C9B48A&color_dots=#161b22,#3a3328,#5c4826,#7a6034,#c9b48a
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
