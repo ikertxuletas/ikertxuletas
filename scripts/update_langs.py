@@ -107,8 +107,10 @@ def main():
         p.write_text(s, encoding="utf-8")
     if not push:
         return "built" + note
-    run("git", "add", *(f"assets/{n}-{th}.svg" for n, th in svgs), *(f"assets/{p.name}" for p in data))
-    run("git", "commit", "-q", "-m", "Update profile activity")
+    paths = [*(f"assets/{n}-{th}.svg" for n, th in svgs), *(f"assets/{p.name}" for p in data)]
+    run("git", "add", *paths)
+    # Path-limited commit: anything else left staged in this clone must never reach the public repo.
+    run("git", "commit", "-q", "-m", "Update profile activity", "--", *paths)
     run("git", "push", "-q")
     return "pushed" + note
 

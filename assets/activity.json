@@ -3,25 +3,6 @@
  "repos": 10,
  "rows": [
   {
-   "name": "Quant research",
-   "line": "Tests investment ideas against reality before any money does.",
-   "last": "20 Nov",
-   "weeks": [
-    0,
-    0,
-    123,
-    28,
-    7,
-    0,
-    0,
-    0,
-    7,
-    36,
-    61,
-    0
-   ]
-  },
-  {
    "name": "Nightshift lab",
    "line": "AI agents read papers overnight and paper-trade the ideas that survive.",
    "last": "18 Nov",
@@ -57,6 +38,25 @@
     0,
     39,
     42
+   ]
+  },
+  {
+   "name": "Quant research",
+   "line": "Tests investment ideas against reality before any money does.",
+   "last": "12 Nov",
+   "weeks": [
+    0,
+    0,
+    123,
+    28,
+    7,
+    0,
+    0,
+    0,
+    7,
+    36,
+    61,
+    0
    ]
   },
   {

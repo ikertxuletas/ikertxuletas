@@ -37,8 +37,14 @@ def fmt_day(d):
     return f"{d.day} {MONTHS[d.month - 1]}"
 
 
-def pick_rows(repos, allow):
-    return sorted((r for r in repos if r["name"] in allow), key=lambda r: r["pushedAt"], reverse=True)[:ROWS]
+def last_date(repo, dates):
+    # pushedAt also moves on side-branch pushes, so it is only the fallback when no default-branch commit is in range.
+    ds = dates.get(repo["name"])
+    return max(ds) if ds else datetime.fromisoformat(repo["pushedAt"]).date()
+
+
+def pick_rows(repos, allow, dates):
+    return sorted((r for r in repos if r["name"] in allow), key=lambda r: last_date(r, dates), reverse=True)[:ROWS]
 
 
 def commit_dates(owner, repo, since):
@@ -60,8 +66,8 @@ def measure(owner, allow):
     # The profile repo is skipped in the totals: its commits are this job's own daily updates.
     dates = {r["name"]: commit_dates(owner, r["name"], since) for r in repos if r["name"] != owner}
     rows = [{"name": allow[r["name"]][0], "line": allow[r["name"]][1],
-             "last": fmt_day(datetime.fromisoformat(r["pushedAt"]).date()),
-             "weeks": weekly_buckets(dates.get(r["name"], []), today)} for r in pick_rows(repos, allow)]
+             "last": fmt_day(last_date(r, dates)),
+             "weeks": weekly_buckets(dates.get(r["name"], []), today)} for r in pick_rows(repos, allow, dates)]
     commits_30d = sum(1 for ds in dates.values() for d in ds if (today - d).days < 30)
     return {"commits_30d": commits_30d, "repos": len(repos), "rows": rows}, [r["name"] for r in repos]
 
@@ -125,7 +131,12 @@ def selfcheck():
                            today - timedelta(days=84)], today) == [1] + [0] * 9 + [1, 2]
     assert weekly_buckets([], today) == [0] * 12
     assert fmt_day(date(2026, 11, 19)) == "19 Nov" and fmt_day(date(2026, 5, 3)) == "3 May"
-    assert pick_rows([{"name": "gone", "pushedAt": "2026-11-19T00:00:00Z"}], {"x": ["X", "x"]}) == []
+    assert pick_rows([{"name": "gone", "pushedAt": "2026-11-19T00:00:00Z"}], {"x": ["X", "x"]}, {}) == []
+    side_push = [{"name": "a", "pushedAt": "2026-11-20T00:00:00Z"}, {"name": "b", "pushedAt": "2026-11-18T00:00:00Z"}]
+    dates = {"a": [date(2026, 11, 12)], "b": [date(2026, 11, 18)]}
+    assert [r["name"] for r in pick_rows(side_push, {"a": [], "b": []}, dates)] == ["b", "a"]
+    assert last_date(side_push[0], dates) == date(2026, 11, 12)
+    assert last_date({"name": "c", "pushedAt": "2026-09-01T10:00:00Z"}, {}) == date(2026, 9, 1)
     check_private(["Quant research"], ["hidden-repo"])
     try:
         check_private(["... Hidden-Repo ..."], ["hidden-repo"])
