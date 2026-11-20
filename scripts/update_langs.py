@@ -1,5 +1,5 @@
 """Daily job: measures the languages across all of the owner's repositories with the GitHub CLI,
-rebuilds the languages chart (light and dark) and pushes it if anything changed. No AI involved."""
+rebuilds the languages chart and the activity card (light and dark) and pushes them if anything changed. No AI involved."""
 import json
 import math
 import subprocess
@@ -8,6 +8,7 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+import activity
 from svgkit import ASSETS, EASE, THEMES, W, cycle_css, esc, svg, write
 
 OWNER = "ikertxuletas"
@@ -84,21 +85,32 @@ def chart(t, n_repos, langs):
 
 
 def main():
+    push = "--no-push" not in sys.argv
+    if push:
+        # Pull before writing anything: pulling over freshly written files is what used to fail.
+        run("git", "pull", "--rebase", "--autostash", "-q")
     n_repos, langs = measure()
-    data = ASSETS / "langs.json"
-    new = json.dumps({"repos": n_repos, "langs": langs}, indent=1)
-    if "--force" not in sys.argv and data.exists() and data.read_text(encoding="utf-8") == new:
-        return "unchanged"
-    for theme, t in THEMES.items():
-        write("langs", theme, chart(t, n_repos, langs))
-    data.write_text(new, encoding="utf-8")
-    if "--no-push" in sys.argv:
-        return "built"
-    run("git", "pull", "--rebase", "-q")
-    run("git", "add", "assets/langs-dark.svg", "assets/langs-light.svg", "assets/langs.json")
-    run("git", "commit", "-q", "-m", "Update languages chart")
+    data = {ASSETS / "langs.json": json.dumps({"repos": n_repos, "langs": langs}, indent=1)}
+    svgs = {("langs", theme): chart(t, n_repos, langs) for theme, t in THEMES.items()}
+    allow = activity.load_allow(activity.ALLOW_PATH)
+    note = " (no activity list)" if allow is None else ""
+    if allow is not None:
+        act, names = activity.measure(OWNER, allow)
+        data[ASSETS / "activity.json"] = json.dumps(act, indent=1)
+        svgs.update({("activity", theme): activity.card(t, act) for theme, t in THEMES.items()})
+        activity.check_private([*svgs.values(), *data.values()], [n for n in names if n not in allow])
+    if "--force" not in sys.argv and all(p.exists() and p.read_text(encoding="utf-8") == s for p, s in data.items()):
+        return "unchanged" + note
+    for (name, theme), content in svgs.items():
+        write(name, theme, content)
+    for p, s in data.items():
+        p.write_text(s, encoding="utf-8")
+    if not push:
+        return "built" + note
+    run("git", "add", *(f"assets/{n}-{th}.svg" for n, th in svgs), *(f"assets/{p.name}" for p in data))
+    run("git", "commit", "-q", "-m", "Update profile activity")
     run("git", "push", "-q")
-    return "pushed"
+    return "pushed" + note
 
 
 if __name__ == "__main__":

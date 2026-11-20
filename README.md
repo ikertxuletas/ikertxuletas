@@ -22,6 +22,10 @@
 
 <br><br>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"><img src="assets/activity-light.svg" width="100%" alt="What I'm working on now, updated daily from my repositories."></picture>
+
+<br><br>
+
 <a href="https://ikertxuletas.github.io/#stack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg"><img src="assets/langs-light.svg" width="100%" alt="What my code is made of, measured across all my repositories and updated daily."></picture></a>
 
 <br><br>

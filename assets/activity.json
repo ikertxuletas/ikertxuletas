@@ -1,0 +1,82 @@
+{
+ "commits_30d": 216,
+ "repos": 10,
+ "rows": [
+  {
+   "name": "Quant research",
+   "line": "Tests investment ideas against reality before any money does.",
+   "last": "20 Nov",
+   "weeks": [
+    0,
+    0,
+    123,
+    28,
+    7,
+    0,
+    0,
+    0,
+    7,
+    36,
+    61,
+    0
+   ]
+  },
+  {
+   "name": "Nightshift lab",
+   "line": "AI agents read papers overnight and paper-trade the ideas that survive.",
+   "last": "18 Nov",
+   "weeks": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    1
+   ]
+  },
+  {
+   "name": "LeeMe",
+   "line": "Turns any PDF into an audiobook in natural Spanish.",
+   "last": "18 Nov",
+   "weeks": [
+    3,
+    0,
+    0,
+    0,
+    22,
+    0,
+    0,
+    1,
+    0,
+    0,
+    39,
+    42
+   ]
+  },
+  {
+   "name": "Trade-fair prospecting",
+   "line": "Builds client lists from trade-fair directories, automatically.",
+   "last": "14 Oct",
+   "weeks": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ ]
+}
