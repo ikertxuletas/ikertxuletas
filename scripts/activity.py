@@ -78,11 +78,15 @@ def check_private(texts, hidden):
     assert not leaked, f"hidden repositories in output: {leaked}"
 
 
-def spark(t, weeks, gmax, x0, base, w=110, h=18):
+SPARK_W = 124
+
+
+def spark(t, weeks, gmax, x0, base, w=SPARK_W, h=16):
     step = w / (len(weeks) - 1)
     # Square-root scale: one busy week would otherwise flatten every other row.
     pts = " ".join(f"{x0 + i * step:.1f},{base - h * (v / gmax) ** .5:.1f}" for i, v in enumerate(weeks))
-    return (f'<polyline points="{pts}" fill="none" stroke="{t["accent"]}" stroke-width="1.5" '
+    return (f'<rect x="{x0}" y="{base}" width="{w}" height="1" fill="{t["line"]}"/>'
+            f'<polyline points="{pts}" fill="none" stroke="{t["accent"]}" stroke-width="1.5" '
             f'stroke-linejoin="round" stroke-linecap="round"/>')
 
 
@@ -116,8 +120,9 @@ def card(t, data):
               f'<rect class="edge" style="{d}" x="0.5" y="{y + 4.5}" width="{W - 1}" height="{row - 9}" rx="12" fill="none" stroke="{t["accent"]}" stroke-opacity=".7"/></g>'
               f'<g class="nud" style="{d}"><text x="20" y="{y + 32}" font-size="14" font-weight="500" fill="{t["muted"]}">{esc(r["name"])}</text>'
               f'<text x="20" y="{y + 58}" font-size="19" font-weight="600" letter-spacing="-0.4" fill="{t["ink"]}">{esc(r["line"])}</text></g>'
-              + spark(t, r["weeks"], gmax, W - 290, y + 33) +
-              f'<text x="{W - 20}" y="{y + 32}" text-anchor="end" font-size="14" fill="{t["muted"]}">last commit {esc(r["last"])}</text>')
+              # Right column, one edge: the line sits on the name's line, the date on the phrase's baseline.
+              + spark(t, r["weeks"], gmax, W - 20 - SPARK_W, y + 32) +
+              f'<text x="{W - 20}" y="{y + 58}" text-anchor="end" font-size="14" fill="{t["muted"]}">last commit {esc(r["last"])}</text>')
     foot_text = (f'{data["commits_30d"]} commits in the last 30 days across {data["repos"]} repositories, '
                  f'public and private. Updated daily.')
     b += f'<text x="0" y="{h - 8}" font-size="14" fill="{t["muted"]}">{foot_text}</text>'
