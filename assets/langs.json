@@ -3,23 +3,23 @@
  "langs": [
   [
    "Python",
-   80.7
+   80.5
   ],
   [
    "JavaScript",
-   10.5
+   10.6
   ],
   [
    "HTML",
    3.4
   ],
   [
-   "TypeScript",
-   2.6
+   "CSS",
+   2.7
   ],
   [
-   "CSS",
-   2.5
+   "TypeScript",
+   2.6
   ]
  ]
 }

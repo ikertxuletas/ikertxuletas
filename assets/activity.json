@@ -1,7 +1,26 @@
 {
- "commits_30d": 216,
+ "commits_30d": 225,
  "repos": 10,
  "rows": [
+  {
+   "name": "LeeMe",
+   "line": "Turns any PDF into an audiobook in natural Spanish.",
+   "last": "22 Nov",
+   "weeks": [
+    3,
+    0,
+    0,
+    13,
+    9,
+    0,
+    1,
+    0,
+    0,
+    0,
+    61,
+    29
+   ]
+  },
   {
    "name": "Nightshift lab",
    "line": "AI agents read papers overnight and paper-trade the ideas that survive.",
@@ -22,25 +41,6 @@
    ]
   },
   {
-   "name": "LeeMe",
-   "line": "Turns any PDF into an audiobook in natural Spanish.",
-   "last": "18 Nov",
-   "weeks": [
-    3,
-    0,
-    0,
-    0,
-    22,
-    0,
-    0,
-    1,
-    0,
-    0,
-    61,
-    20
-   ]
-  },
-  {
    "name": "Quant research",
    "line": "Tests investment ideas against reality before any money does.",
    "last": "12 Nov",
@@ -48,8 +48,8 @@
     0,
     0,
     123,
-    31,
-    4,
+    33,
+    2,
     0,
     0,
     0,
