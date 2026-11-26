@@ -1,5 +1,5 @@
 {
- "commits_30d": 288,
+ "commits_30d": 313,
  "repos": 10,
  "rows": [
   {
@@ -7,7 +7,7 @@
    "line": "Turns any PDF into an audiobook in natural Spanish.",
    "last": "22 Nov",
    "weeks": [
-    3,
+    0,
     0,
     0,
     22,
@@ -35,8 +35,8 @@
     0,
     0,
     0,
-    0,
-    6,
+    2,
+    4,
     0
    ]
   },
@@ -46,16 +46,16 @@
    "last": "12 Nov",
    "weeks": [
     0,
-    92,
-    57,
-    9,
+    123,
+    27,
+    8,
     0,
     0,
     0,
+    7,
+    35,
+    62,
     0,
-    41,
-    31,
-    32,
     0
    ]
   },
